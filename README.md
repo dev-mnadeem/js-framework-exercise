@@ -1,12 +1,8 @@
 # Gust JavaScript challenge — linked checkboxes
 
-A take-home. The repo arrived with `k.js` — a deliberately rough, dependency-free widget
-micro-framework — three example widgets (tabs, drawers, a self-extending form), and a brief
-asking for a fourth: one controlling checkbox that drives a group of related ones and reflects
-their combined state back as checked, unchecked, or an intermediary "some but not all", the way a
-Gmail inbox header checkbox behaves. Static page, no server, no network — SCSS compiles to one
-stylesheet, Browserify bundles one script, and `k.js` mounts every element carrying a `kjs-type`
-attribute once the DOM is ready.
+Muhammad Nadeem’s linked-checkbox implementation for the Gust JavaScript challenge. Gust supplied the `k.js` starter framework and the tabs, drawers and self-extending-form examples. The linked-checkbox widget, its state handling and tests are the project implementation described here.
+
+The implementation is in [`javascripts/widgets/linked-checkboxes.js`](javascripts/widgets/linked-checkboxes.js) and [`javascripts/lib/linked-checkbox-state.js`](javascripts/lib/linked-checkbox-state.js). SCSS compiles to one stylesheet, Browserify bundles one script, and `k.js` mounts elements carrying a `kjs-type` attribute when the DOM is ready.
 
 ## The three states
 
@@ -118,3 +114,18 @@ only the adapter: read the boxes, call those functions, write `checked`, `indete
   jsdom does implement the activation behaviour this widget leans on, and the transcript confirms
   the same in Chromium, but the two never run together.
 - **No extra features.** Everything above is correctness, tests and documentation.
+
+## Native recheck
+
+![Current built checkbox page](docs/screenshots/native-desktop.png)
+
+[Mobile capture](docs/screenshots/native-mobile.png) and
+[verified interactions](docs/native-browser.json). A real browser checked the
+controller selecting its group, a child changing the controller to indeterminate,
+and the controller clearing the group. The existing 48-test suite, build, and
+lint also pass on Node 22. No framework or runtime dependency was added to the
+widget itself.
+
+## Author
+
+[**Muhammad Nadeem**](https://github.com/dev-mnadeem)

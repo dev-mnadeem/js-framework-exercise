@@ -1,0 +1,11 @@
+{
+  "mode": "Built static checkbox exercise",
+  "checks": [
+    "Browser rendering",
+    "Desktop and mobile capture",
+    "No JavaScript page errors",
+    "Controller checks group",
+    "Child toggles indeterminate",
+    "Controller clears group"
+  ]
+}

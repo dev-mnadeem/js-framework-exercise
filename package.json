@@ -5,7 +5,7 @@
   "description": "Gust developer/designer challenge: a linked-checkbox widget built on the k.js micro-framework",
   "main": "javascript-challenge.js",
   "license": "UNLICENSED",
-  "author": "Gust <devs@gust.com>",
+  "author": "Muhammad Nadeem",
   "contributors": [
     {
       "name": "Kara Bernert",
@@ -45,5 +45,16 @@
     "prettier": "^3.6.2",
     "sass": "^1.93.2",
     "vitest": "^2.1.9"
+  },
+  "maintainers": [
+    {
+      "name": "Muhammad Nadeem",
+      "url": "https://github.com/dev-mnadeem"
+    }
+  ],
+  "homepage": "https://github.com/dev-mnadeem/js-framework-exercise",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-mnadeem/js-framework-exercise.git"
   }
 }
